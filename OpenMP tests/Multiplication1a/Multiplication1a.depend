@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1471019315 source:d:\korovin\work\simulatios\schneidj ufdtd\openmp\multiplication1a\main.cpp
+	<SDKDDKVer.h>
+	<cstdlib>
+	<iostream>
+	<stdio.h>
+	<stdlib.h>
+	<omp.h>
+	<random>
+	<sstream>
+

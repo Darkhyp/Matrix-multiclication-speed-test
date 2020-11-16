@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="arma cygwin" />
+		<Option pch_mode="2" />
+		<Option compiler="cygwin" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/arma" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="cygwin" />
+				<Compiler>
+					<Add option="-std=gnu++17" />
+					<Add option="-m64" />
+					<Add option="-g" />
+					<Add option="-static -fpermissive -fopenmp -lopenblas -llapack" />
+					<Add option="-DUSE_NOPENMP" />
+					<Add option="-DLOADMATRICES" />
+					<Add directory="D:/_install/_Programming/parallel_computing/OpenBLAS/0.3.9 cyg/64/include" />
+					<Add directory="D:/_install/_Programming/parallel_computing/OpenBLAS/0.3.9 openmpcyg/64/include" />
+					<Add directory="D:/_install/_Programming/parallel_computing/OpenBLAS/0.2.18/include" />
+					<Add directory="D:/_install/_Programming/parallel_computing/armadillo-9.860.1/include" />
+					<Add directory="D:/_install/_Programming/parallel_computing/sigpack-1.0.6/source" />
+				</Compiler>
+				<Linker>
+					<Add option="-m64" />
+					<Add library="D:/_install/_Programming/parallel_computing/OpenBLAS/0.3.9 cyg/64/lib/cygopenblas_v0.3.9-gcc_9_3_0p-r0.3.9.a" />
+					<Add library="D:/_install/_Programming/parallel_computing/OpenBLAS/0.3.9 openmpcyg/64/lib/cygopenblas_v0.3.9-gcc_9_3_0p-r0.3.9.a" />
+					<Add library="D:/_install/_Programming/parallel_computing/OpenBLAS/0.2.18/lib/libopenblas_haswellp-r0.2.18.a" />
+					<Add library="C:/cygwin64/lib/gcc/x86_64-pc-cygwin/9.3.0/libgomp.a" />
+					<Add library="C:/Program Files/gnuplot/bin/lua53.dll" />
+					<Add library="libgfortran.a" />
+					<Add library="libquadmath.a" />
+					<Add directory="D:/_install/_Programming/parallel_computing/OpenBLAS/0.3.9 cyg/64/lib" />
+					<Add directory="D:/_install/_Programming/parallel_computing/OpenBLAS/0.3.9 openmpcyg/64/lib" />
+					<Add directory="D:/_install/_Programming/parallel_computing/OpenBLAS/0.2.18/lib" />
+					<Add directory="C:/Program Files/gnuplot/bin" />
+					<Add directory="C:/cygwin64/lib/gcc/x86_64-pc-cygwin/9.3.0" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/arma" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="cygwin" />
+				<Compiler>
+					<Add option="-O3" />
+					<Add option="-std=c++11" />
+					<Add option="-m64" />
+				</Compiler>
+				<Linker>
+					<Add option="-m64" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="../main.cpp" />
+		<Extensions />
+	</Project>
+</CodeBlocks_project_file>

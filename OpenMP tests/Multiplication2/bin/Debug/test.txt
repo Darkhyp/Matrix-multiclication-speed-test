@@ -1,0 +1,15 @@
+Win64 (obtained from sizeof(void*)).
+
+Date : Aug 11 2016
+Time : 22:38:08
+====================================================
+
+C = A*B, where A,B are matrices with size (2000x2000):
+
+max number of threads = 4
+Initializing random matrices (A,B) ...1.3831s
+Check one of elements: A[3][1] = 0.577866
+ijk multiplication ... 739.208s
+ikj multiplication ... 504.453s
+ijk omp multiplication ... 337.424s
+ikj omp multiplication ... 226.62s

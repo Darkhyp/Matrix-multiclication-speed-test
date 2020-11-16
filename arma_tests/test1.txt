@@ -1,0 +1,194 @@
+**************** cygwin64 ****************
+Win64:
+OpenMP 4.5
+Armadillo version: 9.860.1 (Roasted Mocha Fix)
+ OpenBLAS 0.2.18  with 4 thread(s)
+Date : Apr 17 2020
+Time : 18:07:09
+====================================================
+Loading matrix A...
+Loading matrix B...
+Loading matrix C2...
+matrices are loaded in 8.99382s
+Matrix product in gcc+openblas: C = A*B for the size (2000x2000): 0.327402s
+
+**************** mingw64 ****************
+Win64:
+OpenMP 4.5
+Armadillo version: 9.860.1 (Roasted Mocha Fix)
+ OpenBLAS 0.3.9  with 4 thread(s)
+Date : Apr 17 2020
+Time : 18:01:37
+====================================================
+Loading matrix A...
+Loading matrix B...
+Loading matrix C2...
+matrices are loaded in 15.6558s
+Matrix product in gcc+openblas: C = A*B for the size (2000x2000): 0.232135s
+norm2(C-C2)=0
+
+**************** mingw64 in msys64 ****************Win64:
+OpenMP 4.5
+Armadillo version: 9.860.1 (Roasted Mocha Fix)
+ OpenBLAS 0.3.7  with 4 thread(s)
+Date : Apr 17 2020
+Time : 18:08:04
+====================================================
+Loading matrix A...
+Loading matrix B...
+Loading matrix C2...
+matrices are loaded in 15.7391s
+Matrix product in gcc+openblas: C = A*B for the size (2000x2000): 0.233996s
+
+
+
+
+*******
+set PATH=%PATH%;C:\MinGW\bin;C:\include;C:\MinGW\lib
+
+set PATH=%PATH%;"C:\Program Files\mingw-w64\x86_64-6.1.0-posix-seh-rt_v5-rev0\mingw64\lib";"C:\Program Files\mingw-w64\x86_64-6.1.0-posix-seh-rt_v5-rev0\mingw64\include";"C:\Program Files\mingw-w64\x86_64-6.1.0-posix-seh-rt_v5-rev0\mingw64\bin"
+
+mklink /j "C:\GNUplotshortcut" "C:\Program Files\gnuplot\bin"
+
+
+
+g++.exe -Wall -fexceptions -std=c++11 -m64 -g -static -fopenmp -lopenblas -llapack -fpermissive -std=gnu++11 -DWIN32 -std=c++11 -I"D:\_install\_Programming\parallel_computing\armadillo-7.400.2\include" -I"D:\_install\_Programming\parallel_computing\OpenBLAS\include" -I"D:\_install\_Programming\parallel_computing\sigpack-1.0.6\source" -I"C:\MinGW\include" -c "D:\_install\_Programming\parallel_computing\_matrix_product_tests\arma_tests\main.cpp" -o obj\Debug\main.o
+
+-static  включить необходимые библиотеки в исполняемый файл (чтобы это работало надо библиотеки с явным путём)
+-fpermissive -?
+
+
+
+
+**************** cygwin64 ****************
+Win64:
+Armadillo version: 9.860.1 (Roasted Mocha Fix)
+
+ OpenBLAS 0.3.9  with 4 thread(s) (physical=4)
+openblas config: OpenBLAS 0.3.9 DYNAMIC_ARCH NO_AFFINITY Haswell MAX_THREADS=4
+openblas parallel: 1(0 - SEQUENTIAL; 1 - THREAD; 2 - OPENMP)
+Date : Apr 19 2020
+Time : 16:04:26
+====================================================
+
+
+Loading matrix A...
+Loading matrix B...
+Loading matrix C2...
+matrices are loaded in 8.89265s
+Matrix product in gcc+openblas: C = A*B for the size (2000x2000): 0.237833s
+norm2(C-C2)=0: 5.13816s
+
+------
+OpenMP 4.5, max number of threads = 4, uses 1thread(s)
+Armadillo version: 9.860.1 (Roasted Mocha Fix)
+
+ OpenBLAS 0.3.9  with 4 thread(s) (physical=4)
+openblas config: OpenBLAS 0.3.9 DYNAMIC_ARCH NO_AFFINITY USE_OPENMP Haswell MAX_THREADS=4
+openblas parallel: 2(0 - SEQUENTIAL; 1 - THREAD; 2 - OPENMP)
+Date : Apr 19 2020
+Time : 15:55:34
+====================================================
+
+
+Loading matrix A...
+Loading matrix B...
+Loading matrix C2...
+matrices are loaded in 8.88104s
+Matrix product in gcc+openblas: C = A*B for the size (2000x2000): 0.23647s
+norm2(C-C2)=0: 5.20813s
+
+**************** mingw64 ****************
+Win64:
+Armadillo version: 9.860.1 (Roasted Mocha Fix)
+
+ OpenBLAS 0.3.9  with 4 thread(s) (physical=4)
+openblas config: OpenBLAS 0.3.9 DYNAMIC_ARCH NO_AFFINITY USE_OPENMP Haswell MAX_THREADS=4
+openblas parallel: 2(0 - SEQUENTIAL; 1 - THREAD; 2 - OPENMP)
+Date : Apr 19 2020
+Time : 00:07:23
+====================================================
+
+
+Loading matrix A...
+Loading matrix B...
+Loading matrix C2...
+matrices are loaded in 15.1884s
+Matrix product in gcc+openblas: C = A*B for the size (2000x2000): 0.240684s
+norm2(C-C2)=0
+
+**************** mingw64 in msys64 ****************
+Win64:
+Armadillo version: 9.860.1 (Roasted Mocha Fix)
+
+ OpenBLAS 0.3.9  with 4 thread(s) (physical=4)
+openblas config: OpenBLAS 0.3.9 DYNAMIC_ARCH NO_AFFINITY Haswell MAX_THREADS=4
+openblas parallel: 1(0 - SEQUENTIAL; 1 - THREAD; 2 - OPENMP)
+Date : Apr 19 2020
+Time : 16:06:32
+====================================================
+
+
+Loading matrix A...
+Loading matrix B...
+Loading matrix C2...
+matrices are loaded in 15.6366s
+Matrix product in gcc+openblas: C = A*B for the size (2000x2000): 0.240169s
+norm2(C-C2)=0: 5.13752s
+
+---
+OpenMP 4.5, max number of threads = 4, uses 1thread(s)
+Armadillo version: 9.860.1 (Roasted Mocha Fix)
+
+ OpenBLAS 0.3.9  with 4 thread(s) (physical=4)
+openblas config: OpenBLAS 0.3.9 DYNAMIC_ARCH NO_AFFINITY USE_OPENMP Haswell MAX_THREADS=4
+openblas parallel: 2(0 - SEQUENTIAL; 1 - THREAD; 2 - OPENMP)
+Date : Apr 19 2020
+Time : 15:57:19
+====================================================
+
+
+Loading matrix A...
+Loading matrix B...
+Loading matrix C2...
+matrices are loaded in 15.7822s
+Matrix product in gcc+openblas: C = A*B for the size (2000x2000): 0.236853s
+norm2(C-C2)=0: 5.14853s
+
+
+********************
+gfortran "$(FILE_NAME)" -o "$(NAME_PART)"  -O3 -ffast-math -static -fexternal-blas "D:\_install\_Programming\parallel_computing\OpenBLAS\0.3.9 mingw f\64\lib\libopenblas_v0.3.9-gcc_9_3_0.a"
+********
+ Time of operation (load A,B,C2) was    17.515625000000000       seconds
+ Matrix product in fortran (matmul): C = A * B for the size (        2000 x        2000 )
+ Time of operation was   0.97734373807907104       seconds
+ Norm c-c2=    0.0000000000000000
+ Time of operation was    1.56250000E-02  seconds
+******
+gfortran "$(FILE_NAME)" -o "$(NAME_PART)"  -O3 -ffast-math -static -lopenblas
+**
+ Time of operation (load A,B,C2) was    17.421875000000000       seconds
+ Matrix product in fortran (matmul): C = A * B for the size (        2000 x        2000 )
+ Time of operation was    1.0976562500000000       seconds
+ Norm c-c2=    1.5695493195495383E-010
+ Time of operation was    3.12500000E-02  seconds
+ 
+******************
+(load A,B,C2) Elapsed time =  14.156407117843628 s
+Matrix product in python (using numpy): c= a*b for size ( 2000 x 2000 )
+Elapsed time =  0.256253182888031 s
+norm =  0.0
+Elapsed time =  0.031250953674316406 s
+
+
+**********
+Intel(R) Math Kernel Library Version 2019.0.3 Product Build 20190125 for Intel(R) 64 architecture applications, CNR branch AVX2
+
+Loading matrix A...
+Loading matrix B...
+Loading matrix Ctmp...
+Elapsed time is 30.778822 seconds.
+
+Matrix product in matlab: c = a*b for the size (2000x2000)
+Calculation time is 0.269926s
+ norm(C-Ctmp)=8.45582e-12. Elapsed time is 4.544165 seconds.

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="arma msys mingw" />
+		<Option pch_mode="2" />
+		<Option compiler="cygwin" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/arma" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gnu_gcc_compiler_msys64_mingw" />
+				<Compiler>
+					<Add option="-m64" />
+					<Add option="-g" />
+					<Add option="-std=gnu++17" />
+					<Add option="-static -static-libgcc -static-libstdc++ -fpermissive -fopenmp -lopenblas -lm" />
+					<Add option="-DUSE_NOPENMP" />
+					<Add option="-DLOADMATRICES" />
+					<Add directory="D:/_install/_Programming/parallel_computing/OpenBLAS/0.3.9/64/include" />
+					<Add directory="D:/_install/_Programming/parallel_computing/OpenBLAS/0.3.9 mingw openmp f/64/include" />
+					<Add directory="D:/_install/_Programming/parallel_computing/OpenBLAS/0.3.9 openmp/64/include" />
+					<Add directory="D:/_install/_Programming/parallel_computing/OpenBLAS/0.3.7/64/include" />
+					<Add directory="D:/_install/_Programming/parallel_computing/armadillo-9.860.1/include" />
+					<Add directory="C:/msys64/mingw64/include" />
+				</Compiler>
+				<Linker>
+					<Add option="-m64" />
+					<Add library="D:/_install/_Programming/parallel_computing/OpenBLAS/0.3.9/64/lib/libopenblas_v0.3.9-gcc_8_3_0.a" />
+					<Add library="D:/_install/_Programming/parallel_computing/OpenBLAS/0.3.9 mingw openmp f/64/lib/libopenblas_v0.3.9-gcc_9_3_0.a" />
+					<Add library="D:/_install/_Programming/parallel_computing/OpenBLAS/0.3.9 openmp/64/lib/libopenblas_v0.3.9-gcc_8_3_0.a" />
+					<Add library="D:/_install/_Programming/parallel_computing/OpenBLAS/0.3.7/64/lib/libopenblas_v0.3.7-gcc_8_3_0.a" />
+					<Add library="libgfortran.a" />
+					<Add library="libquadmath.a" />
+					<Add library="C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/9.3.0/libgomp.a" />
+					<Add directory="D:/_install/_Programming/parallel_computing/OpenBLAS/0.3.9/64/lib" />
+					<Add directory="D:/_install/_Programming/parallel_computing/OpenBLAS/0.3.9 mingw openmp f/64/lib" />
+					<Add directory="D:/_install/_Programming/parallel_computing/OpenBLAS/0.3.9 openmp/64/lib" />
+					<Add directory="D:/_install/_Programming/parallel_computing/OpenBLAS/0.3.7/64/lib" />
+					<Add directory="C:/msys64/mingw64/lib" />
+					<Add directory="C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/8.3.0" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/arma" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="cygwin" />
+				<Compiler>
+					<Add option="-O3" />
+					<Add option="-std=c++17" />
+					<Add option="-m64" />
+				</Compiler>
+				<Linker>
+					<Add option="-m64" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="../main.cpp" />
+		<Extensions />
+	</Project>
+</CodeBlocks_project_file>

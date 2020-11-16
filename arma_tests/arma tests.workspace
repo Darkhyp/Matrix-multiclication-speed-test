@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_workspace_file>
+	<Workspace title="Workspace">
+		<Project filename="cygwin/arma_cygwin.cbp" />
+		<Project filename="mingw/arma_mingw.cbp" />
+		<Project filename="msys/arma_msys.cbp" />
+	</Workspace>
+</CodeBlocks_workspace_file>

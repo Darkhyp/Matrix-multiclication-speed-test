@@ -1,0 +1,17 @@
+Win64 (obtained from sizeof(void*)).
+
+C = A*B, where A,B are matrices with size (2000x2000): 
+
+max number of threads = 4
+Create random matrices: 	 = 0.303555 s
+Check one of elements: A[3] = 0.454504 
+1. no transpose  no openmp ...
+2. no transpose, openmp ...
+3. transpose, no openmp ...
+4. transpose, openmp ...
+
+
+no transpose  no openmp 	(0.94s) = 100.539924 s
+no transpose, openmp 		(0.23s) = 47.876084 s
+transpose, no openmp 		(0.27s) = 27.872169 s
+transpose, openmp 		(0.08s) = 15.821010 s
